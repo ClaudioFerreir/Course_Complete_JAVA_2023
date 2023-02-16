@@ -20,8 +20,6 @@ public class DuracaoJogo {
 		
 		if (timeStart > timeEnd) {
 			time = (24 - timeStart) + timeEnd;
-		} else if (timeStart == timeEnd) {
-			time = 24;
 		} else {
 			time = timeEnd - timeStart;
 		}
