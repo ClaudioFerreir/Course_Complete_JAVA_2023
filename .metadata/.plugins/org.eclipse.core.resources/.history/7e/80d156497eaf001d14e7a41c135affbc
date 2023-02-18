@@ -1,6 +1,6 @@
-package curso_programacao;
+package descomplica_faculdade;
 
-public class Exercicio2_01 {
+public class IntegracaoPostgresql {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
