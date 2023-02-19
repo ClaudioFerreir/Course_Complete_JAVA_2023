@@ -1,0 +1,33 @@
+package curso_programacao;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class DivisaoParesFor {
+
+	public static void main(String[] args) {
+		
+		double res = 0;
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Quanto pares de numeros irao ser lidos? ");
+		int n = sc.nextInt();
+		
+		for (int i = 0; i < n; i++) {
+			System.out.print("Digite um numero para numerador: ");
+			double x = sc.nextDouble();
+			System.out.print("Digite um numero para denominador: ");
+			double y = sc.nextDouble();
+			
+			if (y == 0) {
+				System.out.println("divisao impossivel");
+			} else {
+				System.out.println(x/y);
+			}
+		}
+
+	}
+
+}
