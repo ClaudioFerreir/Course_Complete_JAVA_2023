@@ -1,0 +1,17 @@
+package descomplicaThreadsSync;
+
+public class ListaNumeros {
+	synchronized void printTable (int n) { /* sicronizado com isso este e feito de modo que os outros 
+	precisam esperar*/
+		for (int i = 1; i <= 4; i++) {
+			System.out.println(n + i);
+		
+			try {
+				Thread.sleep(300);
+			} catch (Exception e) {
+				System.out.println(e);
+			}
+		}	
+	
+	}
+}

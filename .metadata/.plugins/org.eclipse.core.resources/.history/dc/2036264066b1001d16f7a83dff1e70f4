@@ -1,0 +1,5 @@
+package descomplicaThreadNoSync;
+
+public class ThreadEstendida1 {
+
+}
