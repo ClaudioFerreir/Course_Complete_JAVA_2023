@@ -18,7 +18,7 @@ public class TratMultiplosExceptions {
 			System.out.println("Digite o denominador: ");
 			valor = sc.nextInt();
 			
-			int resultado = 0 / valor;
+			int resultado = 3 / valor;
 			System.out.println(resultado);
 			
 		}
