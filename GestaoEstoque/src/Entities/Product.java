@@ -2,9 +2,9 @@ package Entities;
 
 public class Product {
 	
-	private String name;
-	private double price;
-	private int quantity;
+	public String name;
+	public double price;
+	public int quantity;
 	
 	public double totalValueInStock() {
 		return price * quantity;
