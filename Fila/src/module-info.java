@@ -6,4 +6,5 @@
  *
  */
 module Fila {
+	requires java.desktop;
 }
