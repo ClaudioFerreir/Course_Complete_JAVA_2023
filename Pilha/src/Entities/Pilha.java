@@ -58,6 +58,12 @@ public class Pilha {
 	}
 
 	public void ElementoTopo() {
+		
+		   if (topo >= 0) {
+		      System.out.println("O elemento do topo é " + vetor[topo]);
+		    } else {
+		      System.out.println("Pilha Vazia");
+		    }
 
 	}
 
