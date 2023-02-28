@@ -42,7 +42,18 @@ public class Pilha {
 		    }
 	}
 
-	public void Desempilhar() {
+	public int Desempilhar() {
+		
+		   int desempilhado = 0;
+
+		   if (PilhaVazia()) {
+		      System.out.println("Pilha Vazia");
+		   } else {
+		      desempilhado = vetor[topo];
+		      topo = topo - 1;
+     	    }
+
+		   return desempilhado;
 
 	}
 
