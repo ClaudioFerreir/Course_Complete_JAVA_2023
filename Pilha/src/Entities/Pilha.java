@@ -4,12 +4,36 @@ public class Pilha {
 	
 	int tamanho;
 	int topo;
-	int vetor;
+	int[] vetor;
 	
-	Pilha (int tam) {
+	public Pilha (int tamanho) {
 		topo = -1;
-		tamanho = tam;
-		vetor = new int(tam);
+		this.tamanho = tamanho;
+		vetor = new int[tamanho];
+	}
+	
+	public boolean PilhaVazia() {
+		
+	}
+	
+	public boolean PilhaCheia() {
+		
+	}
+	
+	public void Empilhar(int elemento) {
+		
+	}
+	
+	public void Desempilhar() {
+		
+	}
+	
+	public void ElementoTopo() {
+		
+	}
+	
+	public void MostrarPilha() {
+		
 	}
 
 }
