@@ -68,7 +68,12 @@ public class Pilha {
 	}
 
 	public void MostrarPilha() {
+		   
+		   int i;
 
+		   for (i = topo ; i >= 0 ; i--) {
+		      System.out.println("Elemento " + vetor[i] + " posição " + i);
+		    }
 	}
 
 }
