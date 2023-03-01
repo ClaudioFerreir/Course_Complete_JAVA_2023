@@ -29,7 +29,7 @@ public class ListaLigada {
 		
 		while (NoTemp != null) {
 			tamanho = tamanho + 1;
-			NoTemp = NoTemp.prox;
+			NoTemp = NoTemp.prox; // ponteiro temporario que aponta para o inicio da lista
 		}
 		return tamanho;
 		
