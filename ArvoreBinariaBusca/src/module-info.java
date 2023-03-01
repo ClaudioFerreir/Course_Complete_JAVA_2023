@@ -5,6 +5,6 @@
  * @author claudioferreir
  *
  */
-module ListaLigada {
+module ArvoreBinariaBusca {
 	requires java.desktop;
 }
