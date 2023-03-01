@@ -4,7 +4,21 @@ public class ListaLigada {
 
 	No primeiro, ultimo;
 	
-	ListaLigada () {
+	ListaLigada() {
+		primeiro = null;
+		ultimo = null;
+	}
+	
+	public boolean ListaVazia() {
+		
+		if (primeiro == null && ultimo == null) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public void Destruir() {
 		primeiro = null;
 		ultimo = null;
 	}
