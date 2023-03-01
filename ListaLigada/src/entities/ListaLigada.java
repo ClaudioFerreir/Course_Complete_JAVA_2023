@@ -32,7 +32,18 @@ public class ListaLigada {
 			NoTemp = NoTemp.prox; // ponteiro temporario que aponta para o inicio da lista
 		}
 		return tamanho;
+	}
+	
+	public void MostrarLista() {
 		
+		int i =1;
+		No NoTemp = primeiro;
+		
+		while (NoTemp != null) {
+			System.out.println("Elemento " + NoTemp.elemento + " posição " + i);
+			NoTemp = NoTemp.prox;
+			i = i + 1;
+		}
 	}
 	
 }
