@@ -84,4 +84,49 @@ public class ListaLigada {
 		ultimo = novoNo;
 	}
 	
+	public void InserirMeio(No NovoNo, int posicao) {
+		
+		No NoTemp = primeiro;
+		int NroNos, posAux = 1;
+		
+		NroNos = ContarNos();
+		if (posicao <= 1) {
+			InserirInicio(NovoNo);
+		} else {
+			if (posicao > NroNos) {
+				InserirFinal(NovoNo);
+			} else {
+				while (posAux < (posicao - 1)) {
+					NoTemp = NoTemp.prox;
+					posAux = posAux + 1;
+				}
+				NovoNo.prox = NoTemp.prox;
+				NoTemp.prox = NovoNo;
+			}
+		}
+	}
+	
+	public void Remover(int elemento) {
+		
+		No NoTemp = primeiro;
+		No NoAnt = null;
+		
+		if (primeiro.elemento == elemento) {
+			primeiro = primeiro.prox;
+		} else {
+			while (NoTemp != null && NoTemp.elemento != elemento) {
+				NoAnt = NoTemp;
+				NoTemp = NoTemp.prox;
+			}
+			if (NoTemp != null) {
+				NoAnt.prox = NoTemp.prox;
+			}
+			if (NoTemp == ultimo) {
+				ultimo = NoAnt;
+			}
+		}
+	}
+	
+	
+	
 }
