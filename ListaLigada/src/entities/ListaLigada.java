@@ -46,4 +46,42 @@ public class ListaLigada {
 		}
 	}
 	
+	public void ElementoInicio() {
+		
+		if (ListaVazia()) {
+			System.out.println("Lista Ligada Vazia");
+		} else {
+			System.out.println("O primeiro elemento é " + primeiro.elemento);
+		}
+	}
+	
+	public void ElementoFinal() {
+		
+		if (ListaVazia()) {
+			System.out.println("Lista Ligada Vazia");
+		} else {
+			System.out.println("O último elemento é " + ultimo.elemento);
+		}
+	}
+	
+	public void InserirInicio(No novoNo) {
+		
+		if (ListaVazia()) {
+			ultimo = novoNo;
+		} else {
+			novoNo.prox = primeiro;
+		}
+		primeiro = novoNo;
+	}
+	
+	public void InserirFinal(No novoNo) {
+		
+		if (ListaVazia()) {
+			primeiro = novoNo;
+		} else {
+			ultimo.prox = novoNo;
+		}
+		ultimo = novoNo;
+	}
+	
 }
