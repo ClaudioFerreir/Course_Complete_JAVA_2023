@@ -23,6 +23,8 @@ public class FatorialFor {
 		}
 		
 	System.out.println(multi);
+	
+		sc.close();
 
 	}
 

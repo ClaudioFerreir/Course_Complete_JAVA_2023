@@ -23,4 +23,16 @@ public class ListaLigada {
 		ultimo = null;
 	}
 	
+	public int ContarNos() {
+		int tamanho = 0;
+		No NoTemp = primeiro;
+		
+		while (NoTemp != null) {
+			tamanho = tamanho + 1;
+			NoTemp = NoTemp.prox;
+		}
+		return tamanho;
+		
+	}
+	
 }

@@ -26,6 +26,8 @@ public class DivisaoParesFor {
 				System.out.println(x/y);
 			}
 		}
+		
+		sc.close();
 
 	}
 
