@@ -9,4 +9,5 @@
     <fullyQualifiedTypeName name="java.util.Locale"/>
     <fullyQualifiedTypeName name="Entities.CurrencyConverter"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="entities.ArvoreBinaria"/>
 </qualifiedTypeNameHistroy>
