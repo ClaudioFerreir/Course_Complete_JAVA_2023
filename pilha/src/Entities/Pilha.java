@@ -1,19 +1,23 @@
 package Entities;
 
 public class Pilha {
-
+	// atributos:
 	int tamanho;
 	int topo;
 	int[] vetor;
 
+	// construtor:
 	public Pilha(int tamanho) {
 		topo = -1;
 		this.tamanho = tamanho;
 		vetor = new int[tamanho];
 	}
-
+	
+	//metodos:
+	
 	public boolean PilhaVazia() {
 		
+		// return topo == -1;
 		if (topo == -1)	{
 			return true;
 		} else {
@@ -24,6 +28,7 @@ public class Pilha {
 
 	public boolean PilhaCheia() {
 		
+		// return topo >= tamanho-1;
 	    if (topo >= tamanho-1) {
           return true;
 	    } else {
@@ -35,7 +40,7 @@ public class Pilha {
 	public void Empilhar(int elemento) {
 		
 		  if (! PilhaCheia( )) {
-		      topo = topo + 1;
+		      topo = topo + 1; // topo++;
 		      vetor[topo] = elemento;
 		  } else {
 		      System.out.println ("Pilha Cheia");
@@ -50,7 +55,7 @@ public class Pilha {
 		      System.out.println("Pilha Vazia");
 		   } else {
 		      desempilhado = vetor[topo];
-		      topo = topo - 1;
+		      topo = topo - 1; // topo--;
      	    }
 
 		   return desempilhado;
@@ -59,7 +64,8 @@ public class Pilha {
 
 	public void ElementoTopo() {
 		
-		   if (topo >= 0) {
+		   // if(!pilhaVazia)
+		   if (topo >= 0) { 
 		      System.out.println("O elemento do topo é " + vetor[topo]);
 		    } else {
 		      System.out.println("Pilha Vazia");

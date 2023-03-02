@@ -12,11 +12,14 @@ public class Program {
 		int i;
 		int entrada;
 		
-		for (i = 1; i <= 5; i++) {
+		for (i = 1; i <= 6; i++) { // Ha um elemento a mais para vermos a chamada de pilha cheia
 			entrada = Integer.parseInt(JOptionPane.showInputDialog("Digite um valor inteiro"));
 			intPilha.Empilhar(entrada);
 		}
 		intPilha.MostrarPilha();
+		int x = intPilha.Desempilhar();
+		System.out.println("Desempilhado: " + x);
+		intPilha.ElementoTopo();
 		System.exit(0);
 	}
 
