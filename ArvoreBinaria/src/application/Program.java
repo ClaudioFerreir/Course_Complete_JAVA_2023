@@ -1,5 +1,7 @@
 package application;
 
+import entities.ArvoreBinaria;
+
 public class Program {
 
 	public static void main(String[] args) {
