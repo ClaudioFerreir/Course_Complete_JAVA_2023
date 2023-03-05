@@ -1,5 +1,7 @@
 package application;
 
+import javax.swing.JOptionPane;
+
 import entities.ArvoreBinaria;
 
 public class TesteArvore {
@@ -7,11 +9,11 @@ public class TesteArvore {
 	public static void main(String[] args) {
 		ArvoreBinaria arv = new ArvoreBinaria();
 		
-		arv.inserirNo(8.5);
-		arv.inserirNo(12.7);
-		arv.inserirNo(4.3);
-		arv.inserirNo(2.7);
-		arv.inserirNo(3.7);
+		arv.inserirNo(Double.parseDouble(JOptionPane.showInputDialog("Digite um número real")));
+		arv.inserirNo(Double.parseDouble(JOptionPane.showInputDialog("Digite um número real")));
+		arv.inserirNo(Double.parseDouble(JOptionPane.showInputDialog("Digite um número real")));
+		arv.inserirNo(Double.parseDouble(JOptionPane.showInputDialog("Digite um número real")));
+		arv.inserirNo(Double.parseDouble(JOptionPane.showInputDialog("Digite um número real")));
 		
 		System.out.println("Nós a esquerda: ");
 		arv.exibirNoEsq();
@@ -22,7 +24,8 @@ public class TesteArvore {
 		System.out.println("Raiz: ");
 		arv.exibirRaiz();
 		
-
+		arv.buscarValor(10.0);
+		
+		System.exit(0);
 	}
-
 }

@@ -47,4 +47,22 @@ private BIntNo raiz;
 	public void exibirRaiz() {
 		System.out.println("\nRaiz: " + raiz.valor);
 	}
+	
+	private void buscarNo(BIntNo arv, double valorBuscado) {
+		if (arv != null) {
+			if (valorBuscado == arv.valor) {
+				System.out.println("Item encontrado");
+			} else if (valorBuscado < arv.valor) {
+				buscarNo(arv.esq, valorBuscado);
+			} else if (valorBuscado > arv.valor) {
+				buscarNo(arv.dir, valorBuscado);
+			}
+		} else {
+			System.out.println("Item não localizado");
+		}
+	}
+	
+	public void buscarValor(double valor) {
+		buscarNo(raiz, valor);
+	}
 }
