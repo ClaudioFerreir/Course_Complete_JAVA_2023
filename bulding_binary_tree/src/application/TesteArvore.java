@@ -25,6 +25,8 @@ public class TesteArvore {
 		arv.exibirRaiz();
 		
 		arv.buscarValor(10.0);
+		arv.removerValor(10.0);
+		arv.buscarValor(10.0);
 		
 		System.exit(0);
 	}
