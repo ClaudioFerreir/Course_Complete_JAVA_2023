@@ -26,5 +26,24 @@ public class Conta {
 	public void setTitular(String titular) {
 		this.titular = titular;
 	}
+	
+	public String getTitular() {
+		return titular;
+	}
+	
+	public double getValor() {
+		return valor;
+	}
+	
+	//metodos
+	public void depositar(double valor) {
+		this.valor += valor;
+		System.out.println(this.valor);
+	}
+	
+	public void saque(double valor) {
+		this.valor -= (valor + 5);
+		System.out.println(this.valor);
+	}
 
 }
