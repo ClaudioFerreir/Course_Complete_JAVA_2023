@@ -23,38 +23,47 @@ public class Program {
 			conta = new Conta(numero, titular);
 		}
 		
-		
 		System.out.println(conta);
+		
+		accountOP(conta);
 	}
 		
 
 		
 		public static void accountOP(Conta conta) {
+			int option3 = 0;
 			
-			char option2 = (JOptionPane.showInputDialog("Would you like to do any operation (y/n)?")).charAt(0);
-			if (option2 == 'y') {
-				System.out.println("COD-------OPERATION");
-				System.out.println("-------------------");
-				System.out.println(" 1          Deposit");
-				System.out.println(" 2         Withdraw");
-				
-				int option3 =  Integer.parseInt(JOptionPane.showInputDialog("Enter operation code: "));
-				int valor = 0;
-				
-				switch(option3) {
-				case 1:
-					conta.depositar(valor);
-					break;
-				case 2:
-					conta.saque(valor);
-					break;
-				default:
-					System.out.println("Invalid Code");
-					break;
+			do {
+				char option2 = (JOptionPane.showInputDialog("Would you like to do any operation (y/n)?")).charAt(0);
+				if (option2 == 'y') {
+					System.out.println("COD-------OPERATION");
+					System.out.println("-------------------");
+					System.out.println(" 1          Deposit");
+					System.out.println(" 2         Withdraw");
+					System.out.println(" 0             Exit");
+					
+					option3 =  Integer.parseInt(JOptionPane.showInputDialog("Enter operation code: "));
+						
+					switch(option3) {
+					case 1:
+						double deposito = Double.parseDouble(JOptionPane.showInputDialog("Enter a deposit value: "));
+						conta.depositar(deposito);
+						break;
+					case 2:
+						double retirada = Double.parseDouble(JOptionPane.showInputDialog("Enter a withdraw value: "));
+						conta.saque(retirada);
+						break;
+					case 0:
+						System.out.println("Thanks for using our bank!!!");
+						break;
+					default:
+						System.out.println("Invalid Code");
+						break;
+					}
+					System.out.println("Udapted account data: ");
+					System.out.println(conta);
 				}
-				System.out.println("Udapted account data: ");
-				System.out.println("Account " + conta.getConta() + ", Holder: " + conta.getTitular() + ", Balance: $ " + conta.getSaldo());
-			}
+			} while (option3 != 0);
 
 		}
 	
