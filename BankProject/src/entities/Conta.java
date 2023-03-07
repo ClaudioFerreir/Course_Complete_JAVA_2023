@@ -4,13 +4,13 @@ public class Conta {
 	
 	private int conta;
 	private String titular;
-	private double valor;
+	private double saldo;
 	
 	// constructor
-	public Conta (int conta, String titular, double valor) {
+	public Conta (int conta, String titular, double saldoInicial) {
 		this.conta = conta;
 		this.titular = titular;
-		this.valor = valor;
+		depositar(saldoInicial); // assim o deposito inicial participa das regras do negocios
 	}
 	
 	public Conta (int conta, String titular) {
@@ -31,19 +31,28 @@ public class Conta {
 		return titular;
 	}
 	
-	public double getValor() {
-		return valor;
+	public double getSaldo() {
+		return saldo;
 	}
 	
 	//metodos
 	public void depositar(double valor) {
-		this.valor += valor;
-		System.out.println(this.valor);
+		saldo += valor;
+		System.out.println(saldo);
 	}
 	
 	public void saque(double valor) {
-		this.valor -= (valor + 5);
-		System.out.println(this.valor);
+		saldo -= (valor + 5.00);
+		System.out.println(saldo);
+	}
+	
+	public String toString() {
+		return "Account "
+				+ conta
+				+ ", Holder: "
+				+ titular
+				+ ", Balance: $ "
+				+ String.format("%.2f", saldo);
 	}
 
 }

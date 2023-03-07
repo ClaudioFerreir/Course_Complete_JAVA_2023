@@ -12,29 +12,27 @@ public class Program {
 		
 		int numero =  Integer.parseInt(JOptionPane.showInputDialog("Enter your account number: "));
 		String titular = JOptionPane.showInputDialog("Enter account holder: ");
-		double valor = 0;
+		double saldoInicial = 0;
+		Conta conta;
  		
-		String option = JOptionPane.showInputDialog("Is there na initial deposit (y/n)?");
-		if (option == "y") {	
-			valor =  Double.parseDouble(JOptionPane.showInputDialog("Enter initial deposit value: "));
-		}; 
-		
-		Conta conta = new Conta(numero, titular, valor);
-		
-		System.out.println("Account data: ");
-		System.out.println("Account " + conta.getConta() + ", Holder: " + conta.getTitular() + ", Balance: $ " + conta.getValor());
+		char option = (JOptionPane.showInputDialog("Is there na initial deposit (y/n)?")).charAt(0);
+		if (option == 'y') {	
+			saldoInicial =  Double.parseDouble(JOptionPane.showInputDialog("Enter initial deposit value: "));
+			conta = new Conta(numero, titular, saldoInicial);
+		} else {
+			conta = new Conta(numero, titular);
+		}
 		
 		
-		
-		
+		System.out.println(conta);
 	}
 		
 
 		
 		public static void accountOP(Conta conta) {
 			
-			String option2 = JOptionPane.showInputDialog("Would you like to do any operation (y/n)?");
-			if (option2 == "y") {
+			char option2 = (JOptionPane.showInputDialog("Would you like to do any operation (y/n)?")).charAt(0);
+			if (option2 == 'y') {
 				System.out.println("COD-------OPERATION");
 				System.out.println("-------------------");
 				System.out.println(" 1          Deposit");
@@ -55,7 +53,7 @@ public class Program {
 					break;
 				}
 				System.out.println("Udapted account data: ");
-				System.out.println("Account " + conta.getConta() + ", Holder: " + conta.getTitular() + ", Balance: $ " + conta.getValor());
+				System.out.println("Account " + conta.getConta() + ", Holder: " + conta.getTitular() + ", Balance: $ " + conta.getSaldo());
 			}
 
 		}
