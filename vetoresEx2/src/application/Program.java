@@ -11,23 +11,30 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 		
 		int n;
-				
 		System.out.print("Quantos numeros voce vai digitar? ");
 		n = sc.nextInt();
 		
-		int[] vetor = new int[n];
+		double[] vetor = new double[n];
 		
 		for (int i = 0; i < vetor.length; i++) {
-			System.out.println("Digite um numero: ");
-			vetor[i] = sc.nextInt();
+			System.out.print("Digite um numero: ");
+			vetor[i] = sc.nextDouble();
 		}
 		
-		System.out.println("NUMEROS NEGATIVOS: ");
+		System.out.println();
+		System.out.print("VALORES = ");
+		
+		double sum = 0.0;
+		
 		for (int i = 0; i < vetor.length; i++) {
-			if (vetor[i] < 0) {
-				System.out.println(vetor[i]);
-			}
+			System.out.print(vetor[i]);
+			System.out.print(" ");
+			sum += vetor[i];
 		}
+		
+		System.out.println();
+		System.out.printf("SOMA = %.2f%n", sum);
+		System.out.printf("MEDIA = %.2f", (sum / vetor.length));
 		
 		sc.close();
 	}
