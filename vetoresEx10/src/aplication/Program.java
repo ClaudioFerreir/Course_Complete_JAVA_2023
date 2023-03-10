@@ -14,7 +14,8 @@ public class Program {
 		System.out.print("Quantos alunos serao digitados? ");
 		n = sc.nextInt();
 		
-		String[] vetorNomes = new String[n];
+		//problema com a insercao de nome e sobrenome separado por espaco
+		String[] vetorNomes = new String[n]; 
 		double[] vetorNota1 = new double[n];
 		double[] vetorNota2 = new double[n];
 		
