@@ -37,7 +37,7 @@ public class Program {
 			System.out.println(vetorC[i]);
 		}
 		
-		System.out.println(vetorC);
+
 		
 		sc.close();
 	}
