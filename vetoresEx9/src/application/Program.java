@@ -25,7 +25,7 @@ public class Program {
 			vetorIdades[i] = sc.nextInt();
 		}
 		
-		int idadeMaior = 0;
+		int idadeMaior = vetorIdades[0];
 		String nomeMaisVelho = "";
 		for (int i = 0; i < vetorIdades.length; i++) {
 			if (idadeMaior < vetorIdades[i]) {

@@ -24,9 +24,11 @@ public class Program {
 				vetorGenero[i] = sc.next().charAt(0);
 			}
 			
-			double maior_altura = 0.0;
-			double menor_altura = 0.0;
-			int total_female = 0;
+			double maior_altura = vetorAltura[0];
+			double menor_altura = vetorAltura[0];
+			int total_mulheres = 0;
+			double altura_mulheres = 0.0;
+			
 			for (int i = 0; i < vetorAltura.length; i++) {
 				if (vetorAltura[i] > maior_altura) {
 					maior_altura = vetorAltura[i];
@@ -37,9 +39,15 @@ public class Program {
 				}
 				
 				if (vetorGenero[i] == 'F') {
-					total_female++;
+					altura_mulheres += vetorAltura[i];
+					total_mulheres++;
 				}
 			}
+			
+			System.out.printf("Menor altura = %.2f%n", menor_altura);
+			System.out.printf("Maior altura = %.2f%n", maior_altura);
+			System.out.printf("Media das alturas das mulheres = %.2f%n", (altura_mulheres/total_mulheres));
+			System.out.println("Numero de homens = " + (vetorGenero.length - total_mulheres));
 			
 			sc.close();
 	}
