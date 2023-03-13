@@ -11,6 +11,8 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 		
 		int n;
+		double media;
+		
 		System.out.print("Quantos alunos serao digitados? ");
 		n = sc.nextInt();
 		
@@ -28,7 +30,8 @@ public class Program {
 		
 		System.out.println("Alunos aprovados: ");
 		for (int i = 0; i < vetorNomes.length; i++) {
-			if (((vetorNota1[i] + vetorNota2[i])/2) >= 6.0) {
+			media = (vetorNota1[i] + vetorNota2[i])/2;
+			if (media >= 6.0) {
 				System.out.println(vetorNomes[i]);
 			}
 		}
