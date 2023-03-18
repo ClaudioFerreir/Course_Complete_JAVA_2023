@@ -25,6 +25,9 @@ public class Program {
 		
 		System.out.println(mat);
 		
+		System.out.print("Digite um numero da matrix:");
+		
+		
 		sc.close();
 	}
 
