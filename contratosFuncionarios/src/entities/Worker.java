@@ -12,8 +12,9 @@ public class Worker {
 	private WorkerLevel level;
 	private Double baseSalary;
 	
+	// objeto interno instanciado no momento que instanciamos o objeto worker
 	private Department department;
-	//para toda relacao tem muitos adicionamos uma lista que nao entra no construtor e é inicializada ao declarar
+	// para toda relacao tem muitos adicionamos uma lista que nao entra no construtor e é inicializada ao declarar
 	private List<HourContract> contracts = new ArrayList<>();
 	
 	public Worker() {		

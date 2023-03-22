@@ -12,6 +12,7 @@ public class Program {
 		LocalDate d04 = LocalDate.parse("2022-07-20");
 		LocalDateTime d05 = LocalDateTime.parse("2022-07-20T01:30:26");
 		Instant d06 = Instant.parse("2022-07-20T01:30:26Z");
+		LocalDate d08 = LocalDate.from(d06);
 		
 		//vemos as zonas disponiveis
 		/*for (String s : ZoneId.getAvailableZoneIds()) {
