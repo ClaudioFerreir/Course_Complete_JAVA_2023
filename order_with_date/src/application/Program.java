@@ -1,6 +1,9 @@
 package application;
 
+import java.util.Locale;
 import java.util.Scanner;
+
+import entities.Product;
 
 public class Program {
 
@@ -9,7 +12,10 @@ public class Program {
 		String name, email;
 		Date date;
 		
+		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
+		
+		Product p = new Product("TV", 1000.0);
 		
 		System.out.println("Enter cliente data:");
 		System.out.print("Name: ");
