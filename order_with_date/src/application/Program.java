@@ -16,7 +16,7 @@ public class Program {
 		Product p = new Product("TV", 1000.0);
 		OrderItem oi1 = new OrderItem(1, 1000.0, p);
 		
-		System.out.println(oi1.getProduct().getName());
+		System.out.println(oi1);
 		
 		/*System.out.println("Enter cliente data:");
 		System.out.print("Name: ");
