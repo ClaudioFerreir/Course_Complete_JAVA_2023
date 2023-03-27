@@ -4,7 +4,7 @@ public class OrderItem {
 	
 	private Integer quantity;
 	private Double price;
-	Product product = new Product();
+	Product product;
 	
 	public OrderItem() {
 	}
