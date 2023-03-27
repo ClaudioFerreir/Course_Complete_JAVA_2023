@@ -6,17 +6,20 @@ import java.util.List;
 
 public class Order {
 	
-	Date moment;
-	OrderStatus status;
+	private Date moment;
+	private OrderStatus status;
 	
-	List<OrderItem> orderItem = new ArrayList<>();
+	private Client client;
+	
+	List<OrderItem> items = new ArrayList<OrderItem>();
 	
 	public Order() {
 	}
 
-	public Order(Date moment, OrderStatus status) {
+	public Order(Date moment, OrderStatus status, Client client) {
 		this.moment = moment;
 		this.status = status;
+		this.client = client;
 	}
 
 	public Date getMoment() {
@@ -35,15 +38,21 @@ public class Order {
 		this.status = status;
 	}
 
-	public List<OrderItem> getOrderItem() {
-		return orderItem;
+	public Client getClient() {
+		return client;
 	}
 
-	public void setOrderItem(List<OrderItem> orderItem) {
-		this.orderItem = orderItem;
+	public void setClient(Client client) {
+		this.client = client;
+	}
+
+	public void addItem(OrderItem item) {
+		items.add(item);
 	}
 	
-	
-	
+	public void removeItem(OrderItem item) {
+		items.remove(item);
+	}
+
 	
 }
