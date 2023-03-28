@@ -10,7 +10,7 @@ public class Order {
 	private Date moment;
 	private OrderStatus status;
 	
-	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 	
 	private Client client;
 	
@@ -68,6 +68,7 @@ public class Order {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
+		sb.append("ORDER SUMMARY:");
 		sb.append("Order moment: ");
 		sb.append(sdf.format(moment) + "\n");
 		sb.append("Order status: ");
