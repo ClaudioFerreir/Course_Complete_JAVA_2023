@@ -43,7 +43,6 @@ INDEX VERSION 1.131+/home/claudioferreir/eclipse-workspace/.metadata/.plugins/or
 4067879742.index
 1722038263.index
 1850533724.index
-2818309262.index
 3030284643.index
 2064741995.index
 2077371816.index
