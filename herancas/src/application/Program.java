@@ -3,6 +3,7 @@ package application;
 import java.util.Locale;
 
 import entities.Account;
+import entities.BusinessAcount;
 
 
 public class Program {
@@ -11,9 +12,8 @@ public class Program {
 		
 		Locale.setDefault(Locale.US);
 		
-		Account acc1 = new Account(1001, "Alex", 1000.0);
-		acc1.withdraw(200.0);
-		System.out.println(acc1.getBalance());
+		Account acc = new Account(1001, "Alex", 0.0);
+		BusinessAcount bacc = new BusinessAcount(1002, "Maria", 0.0, 500.0);
 	}
 
 }
