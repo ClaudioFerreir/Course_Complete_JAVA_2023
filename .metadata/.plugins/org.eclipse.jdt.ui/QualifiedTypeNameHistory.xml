@@ -24,4 +24,5 @@
     <fullyQualifiedTypeName name="entities.OrderStatus"/>
     <fullyQualifiedTypeName name="entities.Account"/>
     <fullyQualifiedTypeName name="java.util.Locale"/>
+    <fullyQualifiedTypeName name="entities.BusinessAcount"/>
 </qualifiedTypeNameHistroy>
