@@ -31,6 +31,12 @@ public class Program {
 			acc5.loan(200.0);
 			System.out.println("Loan!");
 		}
+		
+		if (acc3 instanceof SavingsAccount) {
+			SavingsAccount acc5 = (SavingsAccount)acc3;
+			acc5.updateBalance();
+			System.out.println("Update!");
+		}
 	}
 
 }
