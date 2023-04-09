@@ -44,7 +44,9 @@ public class Program {
 		acc1.withdraw(200.0);
 		System.out.println(acc1.getBalance());
 		
-		
+		Account acc2 = new SavingsAccount(1002, "Maria", 1000.0, 0.01);
+		acc2.withdraw(200.0);
+		System.out.println(acc2.getBalance());
 	}
 
 }
