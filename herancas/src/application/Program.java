@@ -14,6 +14,7 @@ public class Program {
 		
 		Locale.setDefault(Locale.US);
 		
+		/*
 		Account acc = new Account(1001, "Alex", 0.0);
 		BusinessAccount bacc = new BusinessAccount(1002, "Maria", 0.0, 500.0);
 		
@@ -36,7 +37,14 @@ public class Program {
 			SavingsAccount acc5 = (SavingsAccount)acc3;
 			acc5.updateBalance(100.0);
 			System.out.println("Update!");
-		}
+		} 
+		*/
+		
+		Account acc1 = new Account(1001, "Alex", 1000.0);
+		acc1.withdraw(200.0);
+		System.out.println(acc1.getBalance());
+		
+		
 	}
 
 }
