@@ -34,7 +34,7 @@ public class Program {
 		
 		if (acc3 instanceof SavingsAccount) {
 			SavingsAccount acc5 = (SavingsAccount)acc3;
-			acc5.updateBalance();
+			acc5.updateBalance(100.0);
 			System.out.println("Update!");
 		}
 	}

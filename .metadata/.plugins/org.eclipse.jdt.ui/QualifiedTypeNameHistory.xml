@@ -25,4 +25,6 @@
     <fullyQualifiedTypeName name="entities.Account"/>
     <fullyQualifiedTypeName name="java.util.Locale"/>
     <fullyQualifiedTypeName name="entities.BusinessAcount"/>
+    <fullyQualifiedTypeName name="entities.BusinessAccount"/>
+    <fullyQualifiedTypeName name="entities.SavingsAccount"/>
 </qualifiedTypeNameHistroy>
